@@ -13,6 +13,8 @@ body {
   width: 100%;
   max-width: 700px;
   position: relative;
+  /* Slider */
+  overflow: hidden;
 }
 
 .testimonials-container h3 {
@@ -22,17 +24,23 @@ body {
 }
 .testimonials-inner {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   width: 600px;
   align-items: center;
   margin: 0 auto;
+  transition: 300ms ease all;
+  position: relative;
+  left: 0;
+  /* transform: translateX(-700px); */
 }
 .testimonial {
   background-color: white;
   width: 48%;
   padding: 35px;
   border-radius: 10px;
-  margin: 0 auto;
+  margin: 5px;
+  width: calc(50% - 10px);
+  flex-shrink: 0;
 }
 .testimonial p {
   font-weight: 500;
@@ -73,11 +81,11 @@ p {
 .arrows img {
   width: 20px;
 }
-.arrows .left-arrow, .right-arrow:hover {
+.arrows .left-arrow,
+.right-arrow:hover {
   cursor: pointer;
 }
 
 .arrows .left-arrow {
   transform: rotate(180deg);
-
 }
